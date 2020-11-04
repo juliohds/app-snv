@@ -8,6 +8,8 @@ import {
   StatusBar,
 } from 'react-native';
 
+import codePush from "react-native-code-push";
+
 import {dateInitial} from './src/utils/tempDaysUtils';
 
 import AsyncStorage from '@react-native-community/async-storage';
@@ -117,4 +119,6 @@ const styles = StyleSheet.create({
   },
 });
 
-export default App;
+export default codePush({
+  checkFrequency: codePush.CheckFrequency.ON_APP_RESUME,
+})(App);

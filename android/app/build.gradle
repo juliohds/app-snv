@@ -132,8 +132,8 @@ android {
         applicationId "com.subindnavida"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 10
-        versionName "3.0"
+        versionCode 11
+        versionName "3.1"
     }
     splits {
         abi {
@@ -163,7 +163,12 @@ android {
         debug {
             signingConfig signingConfigs.debug
         }
+        releaseStaging {
+            resValue "string", "CodePushDeploymentKey", '"EMJO5FCDH-1Xg5qAzOcGH9UFHCrr4KytIUZFG"'            
+            matchingFallbacks = ['release']
+        }
         release {
+            resValue "string", "CodePushDeploymentKey", '"ZMKL8_LevbOcPxPF7imw7MU1YdoEo2Q8P_1yO"'
             // Caution! In production, you need to generate your own keystore file.
             // see https://reactnative.dev/docs/signed-apk-android.
             // signingConfig signingConfigs.release
