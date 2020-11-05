@@ -33,7 +33,7 @@ const CriarTarefa = (props) => {
 
   return (
     <View style={styles.sectionContainer}>
-      <Text style={styles.sectionTitle}>Primeiro Passo</Text>
+      <Text style={styles.sectionTitle}>Primeiro Passo (1)</Text>
       <Text style={styles.sectionDescription}>
       Informe quais <Text style={styles.highlight}>Tarefas</Text> deseja fazer nessa temporada.
       </Text>
